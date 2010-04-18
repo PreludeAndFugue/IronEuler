@@ -3,8 +3,6 @@
  * User: gdk
  * Date: 18/04/2010
  * Time: 23:05
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
 using NumberTheory;
