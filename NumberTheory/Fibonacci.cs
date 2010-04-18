@@ -22,6 +22,4 @@ namespace NumberTheory
 			return a;
 		}
 	}
-	
-
 }

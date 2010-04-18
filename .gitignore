@@ -1,5 +1,6 @@
 bin
 obj
+PartCover
 *.suo
 *.user
 _Resharper*
