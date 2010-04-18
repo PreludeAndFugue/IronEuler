@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factorisation.cs" />
     <Compile Include="Palindrome.cs" />
     <Compile Include="Primes.cs" />
     <Compile Include="Fibonacci.cs" />
