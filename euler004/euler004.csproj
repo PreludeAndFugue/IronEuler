@@ -1,14 +1,13 @@
 ﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{27C10DAC-4404-4A2B-9CE0-97467659706E}</ProjectGuid>
+    <ProjectGuid>{FC30385D-2BA1-46FE-8CA6-42DB9AA5AD7E}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <OutputType>Library</OutputType>
-    <RootNamespace>NumberTheory</RootNamespace>
-    <AssemblyName>NumberTheory</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>euler004</RootNamespace>
+    <AssemblyName>euler004</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <SourceAnalysisOverrideSettingsFile>C:\Documents and Settings\gdk\Application Data\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -45,9 +44,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Palindrome.cs" />
-    <Compile Include="Primes.cs" />
-    <Compile Include="Fibonacci.cs" />
+    <Compile Include="euler004.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NumberTheory\NumberTheory.csproj">
+      <Project>{27C10DAC-4404-4A2B-9CE0-97467659706E}</Project>
+      <Name>NumberTheory</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
