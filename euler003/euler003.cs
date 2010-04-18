@@ -15,7 +15,7 @@ namespace euler003
 		public static void Main(string[] args)
 		{
 			// The first 10,000 primes
-			Primes primes = new Primes(104729);
+			PrimesSieve primes = new PrimesSieve(104729);
 			
 			List<int> primeFactors = new List<int>();
 			

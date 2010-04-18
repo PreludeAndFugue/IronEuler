@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberTheory", "NumberTheor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "euler003", "euler003\euler003.csproj", "{DDF4831C-EB26-4F2D-ABFB-D5D58FD9C46C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberTheoryTest", "NumberTheoryTest\NumberTheoryTest.csproj", "{3D9887ED-C75E-4DD5-8584-F3B19952F211}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -32,5 +34,9 @@ Global
 		{DDF4831C-EB26-4F2D-ABFB-D5D58FD9C46C}.Debug|x86.ActiveCfg = Debug|x86
 		{DDF4831C-EB26-4F2D-ABFB-D5D58FD9C46C}.Release|x86.Build.0 = Release|x86
 		{DDF4831C-EB26-4F2D-ABFB-D5D58FD9C46C}.Release|x86.ActiveCfg = Release|x86
+		{3D9887ED-C75E-4DD5-8584-F3B19952F211}.Debug|x86.Build.0 = Debug|x86
+		{3D9887ED-C75E-4DD5-8584-F3B19952F211}.Debug|x86.ActiveCfg = Debug|x86
+		{3D9887ED-C75E-4DD5-8584-F3B19952F211}.Release|x86.Build.0 = Release|x86
+		{3D9887ED-C75E-4DD5-8584-F3B19952F211}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 EndGlobal

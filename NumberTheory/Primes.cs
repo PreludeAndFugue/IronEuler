@@ -12,11 +12,11 @@ namespace NumberTheory
 	/// <summary>
 	/// Generate all primes numbers less than or equal to max using a sieve.
 	/// </summary>
-	public class Primes : List<int>
+	public class PrimesSieve : List<int>
 	{	
 		private int[] _primes;
 		
-		public Primes(int max)
+		public PrimesSieve(int max)
 		{
 			fillArray(max);
 			generatePrimes(max);
