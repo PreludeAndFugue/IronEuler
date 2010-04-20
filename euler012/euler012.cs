@@ -33,23 +33,23 @@ using NumberTheory;
 
 namespace euler012
 {
-	class Program
-	{
-		public static void Main(string[] args)
-		{
-			for (int i = 1; i < 1000000000; i++)
-			{
-				int t_num = Sequences.TriangleNumber(i);
-				int[] divisors = Factorisation.divisors(t_num);
-				if (divisors.Length > 500)
-				{
-					Console.Out.WriteLine("Tri num: {0}", t_num);
-					break;
-				}
-			}
-			
-			Console.Write("Press any key to continue . . . ");
-			Console.ReadKey(true);
-		}
-	}
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            for (int i = 1; i < 1000000000; i++)
+            {
+                int t_num = Sequences.TriangleNumber(i);
+                int[] divisors = Factorisation.divisors(t_num);
+                if (divisors.Length > 500)
+                {
+                    Console.Out.WriteLine("Tri num: {0}", t_num);
+                    break;
+                }
+            }
+
+            Console.Write("Press any key to continue . . . ");
+            Console.ReadKey(true);
+        }
+    }
 }

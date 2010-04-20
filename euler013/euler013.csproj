@@ -1,14 +1,13 @@
 ﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{F6173655-1F88-4E2F-B9F9-B452AEFF55AB}</ProjectGuid>
+    <ProjectGuid>{F2BB57A9-A320-49D8-8BBC-A1702D5931BF}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>Exe</OutputType>
-    <RootNamespace>euler012</RootNamespace>
-    <AssemblyName>euler012</AssemblyName>
+    <RootNamespace>euler013</RootNamespace>
+    <AssemblyName>euler013</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <SourceAnalysisOverrideSettingsFile>C:\Documents and Settings\ags97128\Application Data\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -45,13 +44,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="euler012.cs" />
+    <Compile Include="euler013.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NumberTheory\NumberTheory.csproj">
-      <Project>{27C10DAC-4404-4A2B-9CE0-97467659706E}</Project>
-      <Name>NumberTheory</Name>
-    </ProjectReference>
   </ItemGroup>
 </Project>
