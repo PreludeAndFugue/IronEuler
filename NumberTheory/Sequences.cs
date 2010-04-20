@@ -31,9 +31,9 @@ namespace NumberTheory
 		/// </summary>
 		/// <param name="n">The starting integer.</param>
 		/// <returns>Array of integers - the Hailstone sequence</returns>
-		public static int[] Hailstone(int n)
+		public static long[] Hailstone(long n)
 		{
-		    List<int> sequence = new List<int>();
+		    List<long> sequence = new List<long>();
 		    sequence.Add(n);
 		    while (n != 1)
 		    {

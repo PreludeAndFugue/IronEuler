@@ -35,7 +35,7 @@ namespace NumberTheoryTest
 		    int[][] tests = {hail10, hail2, hail21, hail7};
 		    foreach (int[] test in tests)
 		    {
-		        int[] hail = Sequences.Hailstone(test[0]);
+		        long[] hail = Sequences.Hailstone(test[0]);
 		        Assert.AreEqual(hail.Length, test.Length);
 		        for (int i = 0; i < hail.Length; i++)
 		        {
