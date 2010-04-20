@@ -4,7 +4,7 @@
  * Date: 19/04/2010
  * Time: 23:00
  */
-using System;
+using System;using System.Collections.Generic;
 
 namespace NumberTheory
 {
@@ -13,9 +13,6 @@ namespace NumberTheory
 	/// </summary>
 	public class Sequences
 	{
-		public Sequences()
-		{
-		}
 		
 		public static int TriangleNumber(int n)
 		{
@@ -27,6 +24,30 @@ namespace NumberTheory
 			{
 				return ((n + 1)/2)*n;
 			}
+		}
+		
+		/// <summary>
+		/// Generate the hailstone sequence for an integer.
+		/// </summary>
+		/// <param name="n">The starting integer.</param>
+		/// <returns>Array of integers - the Hailstone sequence</returns>
+		public static long[] Hailstone(long n)
+		{
+		    List<long> sequence = new List<long>();
+		    sequence.Add(n);
+		    while (n != 1)
+		    {
+		        if (n%2 == 0)
+		        {
+		            n /= 2;
+		        }
+		        else
+		        {
+		            n = 3*n + 1;
+		        }
+		        sequence.Add(n);
+		    }
+		    return sequence.ToArray();
 		}
 	}
 }
