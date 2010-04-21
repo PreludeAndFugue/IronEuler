@@ -38,6 +38,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "euler015", "euler015\euler0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "euler016", "euler016\euler016.csproj", "{E590E3AC-3D58-488D-97EE-EAFCA78DFD17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "euler017", "euler017\euler017.csproj", "{FA2F2DDE-D9F6-4486-9C0C-75A7D8A55A44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -116,5 +118,9 @@ Global
 		{E590E3AC-3D58-488D-97EE-EAFCA78DFD17}.Debug|x86.ActiveCfg = Debug|x86
 		{E590E3AC-3D58-488D-97EE-EAFCA78DFD17}.Release|x86.Build.0 = Release|x86
 		{E590E3AC-3D58-488D-97EE-EAFCA78DFD17}.Release|x86.ActiveCfg = Release|x86
+		{FA2F2DDE-D9F6-4486-9C0C-75A7D8A55A44}.Debug|x86.Build.0 = Debug|x86
+		{FA2F2DDE-D9F6-4486-9C0C-75A7D8A55A44}.Debug|x86.ActiveCfg = Debug|x86
+		{FA2F2DDE-D9F6-4486-9C0C-75A7D8A55A44}.Release|x86.Build.0 = Release|x86
+		{FA2F2DDE-D9F6-4486-9C0C-75A7D8A55A44}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 EndGlobal
