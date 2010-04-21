@@ -94,7 +94,7 @@ namespace euler016
         }
     }
     
-    class ListNumber : List<int>
+    public class ListNumber : List<int>
     {
         public ListNumber()
         {}
