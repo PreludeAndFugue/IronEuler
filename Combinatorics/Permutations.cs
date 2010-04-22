@@ -17,42 +17,31 @@ namespace Combinatorics
     {
         public static List<int> getPermutation(List<int> items, int perm_number)
         {
-            // n should be less than len!
+        	// TODO: check that perm_number is less than items.Count!
+        	
+        	// the algorithm works with zero based permutation numbering system
+        	// zeroth permutation is, for example, {0 1 2 3}.
+        	perm_number -= 1;
             List<int> answer = new List<int>();
-            while (items.Count > 1)
+            
+            while ((items.Count > 1) && (perm_number > 0))
             {
-                int index = getIndex(items.Count - 1, perm_number);
+            	int fac_len = Sequences.Factorial(items.Count - 1);
+                int index = perm_number/fac_len;
                 answer.Add(items[index]);
-                items.Remove(index);
-                perm_number -= index*Sequences.Factorial(items.Count - 1);
+                items.RemoveAt(index);
+                perm_number -= index*fac_len;
             }
-            answer.Add(items[0]);
-            return answer;
-        }
-        
-        private static int getIndex(int len, int perm_number)
-        {
-            int fac = Sequences.Factorial(len);
-            int index = 0;
-            perm_number -= fac;
-            while (perm_number > 0)
+            foreach(int i in items)
             {
-                perm_number -= fac;
-                index += 1;
+            	answer.Add(i);
             }
-            return index - 1;
+            return answer;
         }
         
         public static List<char> getPermutation(List<char> items, int n)
         {
             List<char> answer = new List<char>();
-            
-            return answer;
-        }
-        
-        public static List<string> getPermutations(List<string> items, int n)
-        {
-            List<string> answer = new List<string>();
             
             return answer;
         }
