@@ -56,6 +56,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinatorics", "Combinator
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombinatoricsTest", "CombinatoricsTest\CombinatoricsTest.csproj", "{6A750400-50B0-4171-B694-D2C22E0EF88A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "euler024", "euler024\euler024.csproj", "{C45C88E7-E38F-4D1B-8F9C-132D9B33930D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -170,5 +172,9 @@ Global
 		{6A750400-50B0-4171-B694-D2C22E0EF88A}.Debug|x86.ActiveCfg = Debug|x86
 		{6A750400-50B0-4171-B694-D2C22E0EF88A}.Release|x86.Build.0 = Release|x86
 		{6A750400-50B0-4171-B694-D2C22E0EF88A}.Release|x86.ActiveCfg = Release|x86
+		{C45C88E7-E38F-4D1B-8F9C-132D9B33930D}.Debug|x86.Build.0 = Debug|x86
+		{C45C88E7-E38F-4D1B-8F9C-132D9B33930D}.Debug|x86.ActiveCfg = Debug|x86
+		{C45C88E7-E38F-4D1B-8F9C-132D9B33930D}.Release|x86.Build.0 = Release|x86
+		{C45C88E7-E38F-4D1B-8F9C-132D9B33930D}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 EndGlobal
