@@ -78,5 +78,27 @@ namespace NumberTheory
 			int[] result = _result.ToArray();
 			return result;
 		}
+		
+		public static bool isPerfectNumber(int n)
+		{
+		    int[] proper_divisors = ProperDivisors(n);
+		    int sum_pd = 0;
+		    foreach (int i in proper_divisors)
+		    {
+		        sum_pd += i;
+		    }
+		    return n == sum_pd;
+		}
+		
+		public static bool isAbundantNumber(int n)
+		{
+		    int[] proper_divisors = ProperDivisors(n);
+		    int sum_pd = 0;
+		    foreach (int i in proper_divisors)
+		    {
+		        sum_pd += i;
+		    }
+		    return n < sum_pd;
+		}
 	}
 }

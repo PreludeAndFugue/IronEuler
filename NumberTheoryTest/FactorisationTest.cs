@@ -76,5 +76,37 @@ namespace NumberTheoryTest
 				}
 			}
 		}
+		
+		[Test]
+		public void PerfectNumberTest()
+		{
+		    int[] p_nums = {6, 28, 496, 8128};
+		    foreach (int i in p_nums)
+		    {
+		        Assert.IsTrue(Factorisation.isPerfectNumber(i));
+		    }
+		    
+		    int[] not_p_nums = {7, 27, 1023, 2568};
+		    foreach (int i in not_p_nums)
+		    {
+		        Assert.IsFalse(Factorisation.isPerfectNumber(i));
+		    }
+		}
+		
+		[Test]
+		public void AbundantNumberTest()
+		{
+		    int[] a_nums = {12, 18, 40, 42, 102};
+		    foreach (int i in a_nums)
+		    {
+		        Assert.IsTrue(Factorisation.isAbundantNumber(i));
+		    }
+		    
+		    int[] not_a_nums = {13, 14, 101, 82};
+		    foreach (int i in not_a_nums)
+		    {
+		        Assert.IsFalse(Factorisation.isAbundantNumber(i));
+		    }
+		}
 	}
 }

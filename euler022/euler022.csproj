@@ -44,7 +44,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="euler022.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
 </Project>
