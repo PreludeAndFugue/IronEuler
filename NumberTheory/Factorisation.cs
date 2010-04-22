@@ -38,9 +38,17 @@ namespace NumberTheory
 		/// <returns>Ordered array of integer divisors of n.</returns>
 		public static int[] divisors(int n)
 		{
-			List<int> _result = new List<int>();
-			_result.Add(1);
-			_result.Add(n);
+		    int[] proper_divisors = ProperDivisors(n);
+		    List<int> _result = new List<int>(proper_divisors);
+		    _result.Add(n);
+		    //_result.Sort();
+		    return _result.ToArray();
+		}
+		
+		public static int[] ProperDivisors(int n)
+		{
+		    List<int> _result = new List<int>();
+		    _result.Add(1);
 			
 			int upper_limit = (int)Math.Sqrt(n);
 			

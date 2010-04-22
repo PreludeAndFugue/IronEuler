@@ -53,5 +53,28 @@ namespace NumberTheoryTest
 				}
 			}
 		}
+		
+		[Test]
+		public void ProperDivisorsTest()
+		{
+		    int[] test_nums = {10, 23, 2, 24, 4};
+			int[] div_test_10 = {1, 2, 5};
+			int[] div_test_23 = {1};
+			int[] div_test_2 = {1};
+			int[] div_test_24 = {1, 2, 3, 4, 6, 8, 12};
+			int[] div_test_4 = {1, 2};
+			int[][] tests = {div_test_10, div_test_23, div_test_2, div_test_24, div_test_4};
+			for (int i = 0; i < 4; i++)
+			{
+			    int n = test_nums[i];
+			    int[] test_divs = tests[i];
+				int[] divs = Factorisation.ProperDivisors(n);
+				Assert.AreEqual(test_divs.Length, divs.Length, "Test length for {0} -> ", n);
+				for (int j = 0; j < divs.Length; j++)
+				{
+					Assert.AreEqual(divs[j], test_divs[j], "Test contents for {0} -> ", n);
+				}
+			}
+		}
 	}
 }
