@@ -53,5 +53,60 @@ namespace NumberTheoryTest
 				}
 			}
 		}
+		
+		[Test]
+		public void ProperDivisorsTest()
+		{
+		    int[] test_nums = {10, 23, 2, 24, 4};
+			int[] div_test_10 = {1, 2, 5};
+			int[] div_test_23 = {1};
+			int[] div_test_2 = {1};
+			int[] div_test_24 = {1, 2, 3, 4, 6, 8, 12};
+			int[] div_test_4 = {1, 2};
+			int[][] tests = {div_test_10, div_test_23, div_test_2, div_test_24, div_test_4};
+			for (int i = 0; i < 4; i++)
+			{
+			    int n = test_nums[i];
+			    int[] test_divs = tests[i];
+				int[] divs = Factorisation.ProperDivisors(n);
+				Assert.AreEqual(test_divs.Length, divs.Length, "Test length for {0} -> ", n);
+				for (int j = 0; j < divs.Length; j++)
+				{
+					Assert.AreEqual(divs[j], test_divs[j], "Test contents for {0} -> ", n);
+				}
+			}
+		}
+		
+		[Test]
+		public void PerfectNumberTest()
+		{
+		    int[] p_nums = {6, 28, 496, 8128};
+		    foreach (int i in p_nums)
+		    {
+		        Assert.IsTrue(Factorisation.isPerfectNumber(i));
+		    }
+		    
+		    int[] not_p_nums = {7, 27, 1023, 2568};
+		    foreach (int i in not_p_nums)
+		    {
+		        Assert.IsFalse(Factorisation.isPerfectNumber(i));
+		    }
+		}
+		
+		[Test]
+		public void AbundantNumberTest()
+		{
+		    int[] a_nums = {12, 18, 40, 42, 102};
+		    foreach (int i in a_nums)
+		    {
+		        Assert.IsTrue(Factorisation.isAbundantNumber(i));
+		    }
+		    
+		    int[] not_a_nums = {13, 14, 101, 82};
+		    foreach (int i in not_a_nums)
+		    {
+		        Assert.IsFalse(Factorisation.isAbundantNumber(i));
+		    }
+		}
 	}
 }
