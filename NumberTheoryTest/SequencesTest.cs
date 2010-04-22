@@ -43,5 +43,16 @@ namespace NumberTheoryTest
 		        }
 		    }
 		}
+		
+		[Test]
+		public void TestFactorial()
+		{
+		    int[] input = {1, 2, 3, 4, 5, 11};
+		    int[] output = {1, 2, 6, 24, 120, 39916800};
+		    for (int i = 0; i < input.Length; i++)
+		    {
+		        Assert.AreEqual(Sequences.Factorial(input[i]), output[i]);
+		    }
+		}
 	}
 }
