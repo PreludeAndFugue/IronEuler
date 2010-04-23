@@ -31,6 +31,37 @@ namespace NumberTheory
 			return (a/gcd(a, b))*b;
 		}
 		
+		public static int order(int a, int n)
+		{
+		    int k = 2;
+		    int initial_a = a;
+		    
+		    if (gcd(a, n) != 1)
+		    {
+		        throw new ArithmeticException();
+		    }
+		    while (true)
+		    {
+		        a *= initial_a;
+		        a = a%n;
+		        if (a == 1)
+		            break;
+		        k++;
+		    }		    
+		    return k;
+		}
+		
+		public static int powmod(int x, int y, int z)
+		{
+		    int first_x = x;
+		    for (int i = 1; i < y; i++)
+		    {
+		        x *= first_x;
+		        x = x%z;
+		    }
+		    return x;
+		}
+		
 		/// <summary>
 		/// Calculate the positive divisors of a positive integer n.
 		/// </summary>

@@ -5,7 +5,7 @@
  * Time: 16:40
  */
 using System;
-using euler016;
+using NumberTypes;
 
 namespace euler020
 {

@@ -55,6 +55,18 @@ namespace NumberTheoryTest
 		}
 		
 		[Test]
+		public void powmodTest()
+		{
+		    Assert.AreEqual(Factorisation.powmod(5, 100, 17), 13);
+		}
+		
+		[Test]
+		public void orderTest()
+		{
+		    Assert.AreEqual(Factorisation.order(4, 7), 3);
+		}
+		
+		[Test]
 		public void ProperDivisorsTest()
 		{
 		    int[] test_nums = {10, 23, 2, 24, 4};

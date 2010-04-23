@@ -48,9 +48,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\euler016\euler016.csproj">
-      <Project>{E590E3AC-3D58-488D-97EE-EAFCA78DFD17}</Project>
-      <Name>euler016</Name>
+    <ProjectReference Include="..\NumberTypes\NumberTypes.csproj">
+      <Project>{2C0B50CE-178D-4913-886C-81541A6DB7E2}</Project>
+      <Name>NumberTypes</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
