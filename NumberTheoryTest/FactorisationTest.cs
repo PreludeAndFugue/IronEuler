@@ -57,12 +57,14 @@ namespace NumberTheoryTest
 		[Test]
 		public void powmodTest()
 		{
+		    // TODO: add more tests for powmod.
 		    Assert.AreEqual(Factorisation.powmod(5, 100, 17), 13);
 		}
 		
 		[Test]
 		public void orderTest()
 		{
+		    // TODO: add more tests for order.
 		    Assert.AreEqual(Factorisation.order(4, 7), 3);
 		}
 		

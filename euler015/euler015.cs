@@ -28,7 +28,7 @@
   */
  #endregion
 
-// TODO: number 15 not solved.
+// TODO: euler015 not solved.
  
 using System;
 
