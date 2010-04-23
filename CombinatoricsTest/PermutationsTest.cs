@@ -40,6 +40,14 @@ namespace CombinatoricsTest
             {
             	Assert.AreEqual(out3b[i], out3a[i], "Fail for index {0}", i);
             }
+            
+            List<int> in4 = new List<int>(new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9});
+            List<int> out4a = new List<int>(new int[] {2, 7, 8, 3, 9, 1, 5, 4, 6, 0});
+            List<int> out4b = Permutations.getPermutation(in4, 1000000);
+            for (int i = 0; i < 4; i++)
+            {
+            	Assert.AreEqual(out4b[i], out4a[i], "Fail for index {0}", i);
+            }
         }
     }
 }

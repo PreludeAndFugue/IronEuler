@@ -18,12 +18,12 @@ namespace Combinatorics
         public static List<int> getPermutation(List<int> items, int perm_number)
         {
         	// TODO: check that perm_number is less than items.Count!
-        	
+
         	// the algorithm works with zero based permutation numbering system
         	// zeroth permutation is, for example, {0 1 2 3}.
         	perm_number -= 1;
             List<int> answer = new List<int>();
-            
+
             while ((items.Count > 1) && (perm_number > 0))
             {
             	int fac_len = Sequences.Factorial(items.Count - 1);
@@ -38,11 +38,11 @@ namespace Combinatorics
             }
             return answer;
         }
-        
+
         public static List<char> getPermutation(List<char> items, int n)
         {
             List<char> answer = new List<char>();
-            
+
             return answer;
         }
     }

@@ -1,14 +1,13 @@
 ﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{3D9887ED-C75E-4DD5-8584-F3B19952F211}</ProjectGuid>
+    <ProjectGuid>{2C0B50CE-178D-4913-886C-81541A6DB7E2}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>Library</OutputType>
-    <RootNamespace>NumberTheoryTest</RootNamespace>
-    <AssemblyName>NumberTheoryTest</AssemblyName>
+    <RootNamespace>NumberTypes</RootNamespace>
+    <AssemblyName>NumberTypes</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <SourceAnalysisOverrideSettingsFile>C:\Documents and Settings\ags97128\Application Data\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -31,9 +30,6 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
   <ItemGroup>
-    <Reference Include="NUnit.Framework">
-      <HintPath>$(SharpDevelopBinPath)\Tools\NUnit\NUnit.Framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -44,17 +40,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FactorisationTest.cs" />
-    <Compile Include="FibonacciTest.cs" />
-    <Compile Include="PalindromeTest.cs" />
-    <Compile Include="PrimesTest.cs" />
+    <Compile Include="NumberTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SequencesTest.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NumberTheory\NumberTheory.csproj">
-      <Project>{27C10DAC-4404-4A2B-9CE0-97467659706E}</Project>
-      <Name>NumberTheory</Name>
-    </ProjectReference>
   </ItemGroup>
 </Project>
