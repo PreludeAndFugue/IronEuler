@@ -25,7 +25,7 @@ namespace euler025
                 n1 = temp;
                 
                 //Console.WriteLine(n2);
-                if (n2.Count > 4)
+                if (n2.Count > 999)
                     break; 
             }
             
