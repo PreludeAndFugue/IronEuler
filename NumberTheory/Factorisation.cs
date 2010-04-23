@@ -38,7 +38,8 @@ namespace NumberTheory
 		    
 		    if (gcd(a, n) != 1)
 		    {
-		        throw new ArithmeticException();
+		        //throw new ArithmeticException();
+		        return 0;
 		    }
 		    while (true)
 		    {

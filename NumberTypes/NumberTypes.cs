@@ -12,7 +12,8 @@ using System.Collections.Generic;
 namespace NumberTypes
 {
     /// <summary>
-    /// A ListNumber stores large numbers in a List<int> type.
+    /// A ListNumber stores large numbers in a List<int> type. Each int in the
+    /// List is a digit (0 <= i <= 9).
     /// </summary>
     public class ListNumber : List<int>, IComparable
     {
