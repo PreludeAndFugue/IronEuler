@@ -15,6 +15,21 @@ namespace Combinatorics
     /// </summary>
     public class Permutations
     {
+        
+        private int[] items;
+        
+        public Permutations(int[] input)
+        {
+            items = new int[input.Length];
+            for (int i = 0; i < input.Length; i++)
+                items[i] = i;
+        }
+        
+        public int[] nextPerm()
+        {
+            
+        }
+        
         public static List<int> getPermutation(List<int> items, int perm_number)
         {
         	// TODO: check that perm_number is less than items.Count!
