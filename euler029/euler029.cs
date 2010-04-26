@@ -8,8 +8,6 @@ using System;
 using System.Collections.Generic;
 using NumberTypes;
 
-// TODO: euler029 not solved using integers types.
-
 namespace euler029
 {
 	class Program
