@@ -35,6 +35,11 @@ namespace NumberTypes
             this.AddRange(number);
         }
         
+        public ListNumber(ListNumber n)
+        {
+            this.AddRange(n);
+        }
+        
         public static ListNumber operator *(ListNumber number, int multiple)
         {
             int tens = 0;
@@ -51,6 +56,31 @@ namespace NumberTypes
                 tens /= 10;
             }
             //answer.Reverse();
+            return answer;
+        }
+        
+        public static ListNumber operator *(int multiple, ListNumber number)
+        {
+            return number*multiple;
+        }
+        
+        public static ListNumber operator *(ListNumber n1, ListNumber n2)
+        {
+            ListNumber answer = new ListNumber();
+            for (int i = 0; i < n2.Count; i++)
+            {
+                answer += n1._multiplyByPowerOfTen(i)*n2[i];
+            }
+            return answer;
+        }
+        
+        public ListNumber Pow(int n)
+        {
+            ListNumber answer = new ListNumber(1);
+            for (int i = 0; i < n; i++)
+            {
+                answer *= this;
+            }
             return answer;
         }
         
@@ -170,7 +200,7 @@ namespace NumberTypes
         
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return this.ToString().GetHashCode();
         }
         
         public int DigitSum()
@@ -194,6 +224,15 @@ namespace NumberTypes
             return answer;
         }
         
+        public ListNumber _multiplyByPowerOfTen(int n)
+        {
+            ListNumber answer = new ListNumber(this);
+            for (int i = 0; i < n; i++)
+            {
+                answer.Insert(0, 0);
+            }
+            return answer;
+        }
     }
     
     public class ComplexNumber

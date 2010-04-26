@@ -47,4 +47,10 @@
     <Compile Include="euler029.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NumberTypes\NumberTypes.csproj">
+      <Project>{2C0B50CE-178D-4913-886C-81541A6DB7E2}</Project>
+      <Name>NumberTypes</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
