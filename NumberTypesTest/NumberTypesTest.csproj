@@ -41,6 +41,7 @@
       <Project>{2C0B50CE-178D-4913-886C-81541A6DB7E2}</Project>
       <Name>NumberTypes</Name>
     </ProjectReference>
+    <Compile Include="FractionTests.cs" />
     <Compile Include="ListNumberTests.cs" />
   </ItemGroup>
 </Project>

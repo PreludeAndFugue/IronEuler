@@ -8,9 +8,141 @@
  */
 using System;
 using System.Collections.Generic;
+using NumberTheory;
 
 namespace NumberTypes
 {
+	public struct Fraction : IComparable
+	{
+		// denominator and numerator
+		int d, n;
+			
+		public Fraction(int x, int y)
+		{
+			// Denominator cannot be 0.
+			if (y == 0)
+				throw new ArgumentException();
+			/* Normalise the sign of n and d. If d is negative, multiply both n and d by
+			 * -1 to move the sign to the numerator. */
+			if (y < 0)
+			{
+				x *= -1;
+				y *= -1;
+			}
+			// Reduce fraction to lowest common factors.
+			int divisor = Factorisation.gcd(Math.Abs(x), Math.Abs(y));
+			n = x/divisor;
+			d = y/divisor;
+		}
+		
+		public int num {
+			get {return n;}
+		}
+		
+		public int den {
+			get {return d;}
+		}
+		
+		public override string ToString()
+		{
+			return n.ToString() + "/" + d.ToString();
+		}
+		
+		public int CompareTo(object o)
+		{
+			if (o is Fraction)
+			{
+				Fraction f = (Fraction)o;
+				if (n*f.d > d*f.n)
+				{
+					return 1;
+				}
+				else if (n*f.d < d*f.n)
+				{
+					return -1;
+				}
+				else
+				{
+					return 0;
+				}
+			}
+			else
+			{
+				throw new ArgumentException();
+			}
+		}
+		
+		public static bool operator >(Fraction f1, Fraction f2)
+		{
+			return f1.CompareTo(f2) > 0;
+		}
+		
+		public static bool operator <(Fraction f1, Fraction f2)
+		{
+			return f1.CompareTo(f2) < 0;
+		}
+		
+		public static bool operator <=(Fraction f1, Fraction f2)
+		{
+			return f1.CompareTo(f2) <= 0;
+		}
+		
+		public static bool operator >=(Fraction f1, Fraction f2)
+		{
+			return f1.CompareTo(f2) >= 0;
+		}
+		
+		public static bool operator ==(Fraction f1, Fraction f2)
+		{
+			return f1.CompareTo(f2) == 0;
+		}
+		
+		public static bool operator !=(Fraction f1, Fraction f2)
+		{
+			return f1.CompareTo(f2) != 0;
+		}
+		
+		public override bool Equals(object o)
+		{
+			if (o is Fraction)
+			{
+				Fraction f = (Fraction)o;
+				return this.CompareTo(f) == 0;
+			}
+			else
+			{
+				throw new ArgumentException();
+			}
+		}
+		
+		public override int GetHashCode()
+		{
+			// different strings return unique hash codes
+			return this.ToString().GetHashCode();
+		}
+		
+		public static Fraction operator +(Fraction f1, Fraction f2)
+		{
+			return new Fraction(f1.n*f2.d + f1.d*f2.n, f1.d*f2.d);
+		}
+		
+		public static Fraction operator -(Fraction f1, Fraction f2)
+		{
+			return new Fraction(f1.n*f2.d - f1.d*f2.n, f1.d*f2.d);
+		}
+		
+		public static Fraction operator *(Fraction f1, Fraction f2)
+		{
+			return new Fraction(f1.n*f2.n, f1.d*f2.d);
+		}
+		
+		public static Fraction operator /(Fraction f1, Fraction f2)
+		{
+			return new Fraction(f1.n*f2.d, f1.d*f2.n);
+		}
+	}
+	
+	
     /// <summary>
     /// A ListNumber stores large numbers in a List<int> type. Each int in the
     /// List is a digit (0 <= i <= 9).

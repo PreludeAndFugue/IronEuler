@@ -43,4 +43,10 @@
     <Compile Include="NumberTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NumberTheory\NumberTheory.csproj">
+      <Project>{27C10DAC-4404-4A2B-9CE0-97467659706E}</Project>
+      <Name>NumberTheory</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
