@@ -27,7 +27,7 @@ namespace Combinatorics
         
         public int[] nextPerm()
         {
-            
+            return new int[] {0};
         }
         
         public static List<int> getPermutation(List<int> items, int perm_number)

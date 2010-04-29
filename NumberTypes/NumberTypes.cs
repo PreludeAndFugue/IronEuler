@@ -66,12 +66,29 @@ namespace NumberTypes
 					return 0;
 				}
 			}
+			else if (o is int)
+			{
+			    int i = (int)o;
+			    if (n > i*d)
+			    {
+			        return 1;
+			    }
+			    else if (n < i*d)
+			    {
+			        return -1;
+			    }
+			    else
+			    {
+			        return 0;
+			    }
+			}
 			else
 			{
 				throw new ArgumentException();
 			}
 		}
 		
+		#region Fraction-Fraction comparisons
 		public static bool operator >(Fraction f1, Fraction f2)
 		{
 			return f1.CompareTo(f2) > 0;
@@ -101,6 +118,39 @@ namespace NumberTypes
 		{
 			return f1.CompareTo(f2) != 0;
 		}
+		#endregion
+		
+		#region Fraction-int comparisons
+		public static bool operator >(Fraction f, int i)
+		{
+		    return f.CompareTo(i) > 0;
+		}
+		
+		public static bool operator <(Fraction f, int i)
+		{
+		    return f.CompareTo(i) < 0;
+		}
+		
+		public static bool operator <=(Fraction f, int i)
+		{
+		    return f.CompareTo(i) <= 0;
+		}
+		
+		public static bool operator >=(Fraction f, int i)
+		{
+		    return f.CompareTo(i) >= 0;
+		}
+		
+		public static bool operator ==(Fraction f, int i)
+		{
+		    return f.CompareTo(i) == 0;
+		}
+		
+		public static bool operator !=(Fraction f, int i)
+		{
+		    return f.CompareTo(i) != 0;
+		}
+		#endregion
 		
 		public override bool Equals(object o)
 		{
@@ -121,6 +171,12 @@ namespace NumberTypes
 			return this.ToString().GetHashCode();
 		}
 		
+		public static Fraction operator -(Fraction f)
+		{
+		    return new Fraction(-f.n, f.d);
+		}
+		
+		#region Fraction-Fraction maths operators
 		public static Fraction operator +(Fraction f1, Fraction f2)
 		{
 			return new Fraction(f1.n*f2.d + f1.d*f2.n, f1.d*f2.d);
@@ -140,6 +196,51 @@ namespace NumberTypes
 		{
 			return new Fraction(f1.n*f2.d, f1.d*f2.n);
 		}
+		#endregion
+		
+		#region Fraction-int maths operators
+		public static Fraction operator +(Fraction f, int n)
+		{
+		    return new Fraction(f.n + n*f.d, f.d);
+		}
+		
+		public static Fraction operator -(Fraction f, int n)
+		{
+		    return new Fraction(f.n - n*f.d, f.d);
+		}
+		
+		public static Fraction operator *(Fraction f, int n)
+		{
+		    return new Fraction(f.n*n, f.d);
+		}
+		
+		public static Fraction operator /(Fraction f, int n)
+		{
+		    return new Fraction(f.n, f.d*n);
+		}
+		#endregion
+		
+		#region int-Fraction maths operators
+		public static Fraction operator +(int n, Fraction f)
+		{
+		    return f + n;
+		}
+		
+		public static Fraction operator -(int n, Fraction f)
+		{
+		    return -f + n;
+		}
+		
+		public static Fraction operator *(int n, Fraction f)
+		{
+		    return f*n;
+		}
+		
+		public static Fraction operator /(int n, Fraction f)
+		{
+		    return new Fraction(n*f.d, f.n);
+		}
+		#endregion
 	}
 	
 	
